@@ -2,7 +2,7 @@
 
 Snort est le premier système de prévention des intrusions (IPS) open source au monde. Snort IPS utilise une série de règles qui aident à définir l’activité réseau malveillante et utilisent ces règles pour trouver les paquets qui leur correspondent, et génère des alertes pour les utilisateurs.
 
-Snort peut également être déployé en ligne pour arrêter ces paquets. Snort a trois utilisations principales : En tant que renifleur de paquets comme tcpdump, en tant qu’enregistreur de paquets — ce qui est utile pour le débogage du trafic réseau, ou il peut être Utilisé comme un système complet de prévention des intrusions sur le réseau. Snort peut être téléchargé et configuré pour et à des fins professionnelles.
+Snort peut également être déployé en ligne pour arrêter ces paquets. Snort a trois utilisations principales : En tant que renifleur de paquets comme tcpdump, en tant qu’enregistreur de paquets ce qui est utile pour le débogage du trafic réseau, ou il peut être Utilisé comme un système complet de prévention des intrusions sur le réseau. Snort peut être téléchargé et configuré pour et à des fins professionnelles.
 
 
 
