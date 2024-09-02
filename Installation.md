@@ -6,8 +6,7 @@ Snort peut également être déployé en ligne pour arrêter ces paquets. Snort 
 
 
 
-# Étape 1 :
-## Installer les dépendances nécessaires :
+# Étape 1 : Installer les dépendances nécessaires :
 
 ```bash
 sudo apt update
@@ -92,3 +91,47 @@ sudo ldconfig
 ```bash
 snort -V
 ```
+
+
+
+# Étape 7 (Facultatif) : Configurer Snort en tant que Service
+* Pour exécuter Snort en tant que service sur votre système, vous pouvez créer un fichier de service systemd.
+
+* Créer un fichier de service :
+
+```bash
+sudo nano /etc/systemd/system/snort3.service
+```
+Ajoutez-y les lignes suivantes :
+
+```ini
+[Unit]
+Description=Snort 3 NIDS Daemon
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/snort -c /usr/local/etc/snort/snort.lua -i eth0 -D
+User=snort
+Group=snort
+
+[Install]
+WantedBy=multi-user.target
+```
+
+* Activer et démarrer le service :
+
+```bash
+sudo systemctl enable snort3
+sudo systemctl start snort3
+```
+
+* Vérifier le service :
+
+* Consultez les journaux pour vérifier que Snort fonctionne correctement :
+
+```bash
+sudo journalctl -u snort3
+```
+
+## Étape 8 : Surveillance et Gestion de Snort
+* Vous pouvez maintenant surveiller les alertes générées par Snort en consultant les fichiers journaux situés dans `/var/log/snort`.
