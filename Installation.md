@@ -6,7 +6,7 @@ Snort peut également être déployé en ligne pour arrêter ces paquets. Snort 
 
 
 
-# Étape 1 : Installer les dépendances nécessaires :
+# Étape 1 : Installer les dépendances nécessaires 
 
 ```bash
 sudo apt update
